@@ -22,7 +22,7 @@ const timeout = function (s) {
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-let id = window.location.hash.slice(1);
+
 //Happens whenever a change in hash of url or loading
 const controlRecipe = async function () {
   try {
@@ -100,10 +100,6 @@ async function controlAddRecipe(recipe) {
   }
 }
 
-function newFeature() {
-  console.log('Welcome!');
-}
-
 function init() {
   model.init();
   recipeView.addHandlerRender(controlRecipe);
@@ -112,7 +108,6 @@ function init() {
   searchView.addHandlerSearch(controlSearchResults);
   addRecipeView.addHandlerAddRecipe(controlAddRecipe);
   paginationView.addHandlerPagination(controlPagination);
-  newFeature();
 }
 init();
 
